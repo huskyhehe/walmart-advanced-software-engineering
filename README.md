@@ -55,7 +55,7 @@ There is no need to get into implementation specifics, keep things abstract and 
 
 <br/>
 
-## Relational Database Design
+## Task 3: Relational Database Design
 Design a relational database to satisfy a complex collection of requirements.
 ### Background
 The Walmart pet department has decided to combine its numerous databases into a single source of truth. The centralized database will save much time and effort when it comes to querying the data and collecting metrics. They just got approval to begin the project, so now it's up to your team to begin putting the database together. The first step is to figure out the database schema. You have been selected to design the database, and are expected to have the first draft of an ERD completed shortly. The pet department has sent over a list of requirements the design must satisfy and are eager to get started.
@@ -75,12 +75,12 @@ Your task is to draft an ERD for an appropriately normalized relational database
     - Pet food, which has a name, manufacturer, weight, flavor, and target health condition.
     - Pet toys, which have an associated material, name, manufacturer, and durability.
     - Pet apparel, which has a color, manufacturer, size, name, and specific care instructions.
-- [x]Each product should be associated with one or more animals.
-- [x]Each product should be associated with a manufacturer.
-- [x]The database should track customers and their transactions.
+- [x] Each product should be associated with one or more animals.
+- [x] Each product should be associated with a manufacturer.
+- [x] The database should track customers and their transactions.
     - It should store customer names and email addresses.
     - Customers can make transactions to purchase one or more products.
     - Each transaction should store the date and the products involved.
-- [x]The database should track shipments to various Walmart locations.
+- [x] The database should track shipments to various Walmart locations.
     - Each location should be represented by a name and a zip code.
     - A shipment is recorded as an origin, a destination, and a collection of products, each with an associated quantity.
