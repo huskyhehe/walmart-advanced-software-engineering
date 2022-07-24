@@ -36,7 +36,7 @@ Your task is to draft a UML class diagram describing the data processors for a p
 
 Here are the requirements for your design:
 
-- [x] The processor must implement a `configure` method that accepts a `ModeIdentifier` and a `DatabaseIdentifier` as parameters.
+- [x] The processor must implement a `configure` method that accepts a `ModeIdentifier` and a `DatabaseIdentifier` as parameters. 
 - [x] This method is called to change the operating mode of the processor, and/or select the current database.
 - [x] The processor must be able to change between the following modes:
     - Dump mode: simply drops the data.
