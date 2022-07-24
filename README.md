@@ -23,7 +23,7 @@ Think carefully about how you implement each method, and manage the underlying d
 <br/>
 
 ## Task 2: Software Architecture
-Draft a UML class diagram describing the data processors for a pipeline.
+Design a system which satisfies complex business requirements.
 ### Background
 After much deliberation amongst your team, you have been trusted to design part of a new data processing pipeline. You will be responsible for coming up with the architecture for a dynamically reconfigurable data processor. The processor will have several different modes, each of which treats incoming data in a different way. Some modes will pass the result along to a database, and others will additionally validate the data against the database. To further complicate matters, there are several databases in play, and the processor needs the ability to toggle between them on the fly. The system needs to be extendable - your team has every intention of adding additional modes and databases in the future - so take extra care to ensure the system isn't rigid. Adhere to good design principles, use design patterns where they make sense, and remember your SOLID principles. Your project lead will use this to assess your ability to design clean code, so be sure to show off what you know. Success here could mean a promotion, don't squander the chance!
 
@@ -52,3 +52,35 @@ Here are the requirements for your design:
 This method will have different behavior depending on the currently configured mode and database.
 
 There is no need to get into implementation specifics, keep things abstract and high level. For example, you need only specify connect, insert, and validate methods for each database, there is no need to specify how those methods go about performing their verbs. The point of this task is to think about how code is structured. 
+
+<br/>
+
+## Relational Database Design
+Design a relational database to satisfy a complex collection of requirements.
+### Background
+The Walmart pet department has decided to combine its numerous databases into a single source of truth. The centralized database will save much time and effort when it comes to querying the data and collecting metrics. They just got approval to begin the project, so now it's up to your team to begin putting the database together. The first step is to figure out the database schema. You have been selected to design the database, and are expected to have the first draft of an ERD completed shortly. The pet department has sent over a list of requirements the design must satisfy and are eager to get started.
+
+### To-do
+Your task is to draft a UML class diagram describing the data processors for a pipeline. The component responsible for reading in input data is being designed by another engineer, so you only need to worry about what happens to the data when it reaches your processor. You may assume three classes already exist:
+
+- `Datapoint`: this class represents both raw and processed data points. Any time data moves between methods you may use this class as an abstraction.
+
+- `ModeIdentifier`: an enum used to identify a processor mode.
+
+- `DatabaseIdentifier`: an enum used to identify a database connection.
+
+Your task is to draft an ERD for an appropriately normalized relational database that satisfies these requirements:
+
+- [x] The database should store information related to the following products.
+    - Pet food, which has a name, manufacturer, weight, flavor, and target health condition.
+    - Pet toys, which have an associated material, name, manufacturer, and durability.
+    - Pet apparel, which has a color, manufacturer, size, name, and specific care instructions.
+- [x]Each product should be associated with one or more animals.
+- [x]Each product should be associated with a manufacturer.
+- [x]The database should track customers and their transactions.
+    - It should store customer names and email addresses.
+    - Customers can make transactions to purchase one or more products.
+    - Each transaction should store the date and the products involved.
+- [x]The database should track shipments to various Walmart locations.
+    - Each location should be represented by a name and a zip code.
+    - A shipment is recorded as an origin, a destination, and a collection of products, each with an associated quantity.
