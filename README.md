@@ -53,6 +53,9 @@ This method will have different behavior depending on the currently configured m
 
 There is no need to get into implementation specifics, keep things abstract and high level. For example, you need only specify connect, insert, and validate methods for each database, there is no need to specify how those methods go about performing their verbs. The point of this task is to think about how code is structured. 
 
+### *My Solution:*
+<img src = "./Task_2_SoftwareArchitecture.svg">
+
 <br/>
 
 ## Task 3: Relational Database Design
@@ -84,6 +87,9 @@ Your task is to draft an ERD for an appropriately normalized relational database
 - [x] The database should track `shipments` to various Walmart locations.
     - Each `location` should be represented by a name and a zip code.
     - A shipment is recorded as an origin, a destination, and a collection of products, each with an associated quantity.
+
+### *My Solution:*
+<img src = "./Task_3_RelationalDatabaseDesign.svg">
 
 <br/>
 
